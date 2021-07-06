@@ -1,0 +1,15 @@
+body{background-image: url(../img/double_bubble.png);}
+
+.btn-block{min-width:100% }
+.logo {
+  font-family: 'Peralta', fantasy;
+}
+
+.logo a {
+  color: rgba(220,80,130,.9);
+}
+
+.logo a:link {
+  text-decoration: none;
+}
+.logo a:hover{color: rgba(0,0,0,.5);}

@@ -1,0 +1,33 @@
+{% extends 'base_accounts.html'%}
+
+{% block title %} Log in to Django Boards {% endblock %}
+{% block content%}
+	<div class="row justify-content-center">
+		<div class="col-lg-3 col-md-10 col-sm-12">
+			<div class="card">
+				<div class="card-body">
+					<h3 class="card-title">Log in</h3>
+					<form method="Post" novalidate>
+						{% csrf_token %}
+						<input type="hidden" name="next" value="{{next}}" >
+						{% include 'includes/form.html' %}
+
+					<div>
+
+					<button type="submit" class=" btn-success btn-block">Log in</button>
+				</div>
+					</form>
+				</div>
+				<div class="card-footer test-muted text-center my-auto">
+				New to Django Boards? <a href="{% url 'signup' %}">Sign Up</a>
+				</div>
+				<div class="text-center py-2">
+					<small>
+						<a href="#" class="text-muted">Forget password?</a>
+					</small>
+				</div>
+			</div>
+		</div>
+	</div>
+<div>
+{% endblock %}
